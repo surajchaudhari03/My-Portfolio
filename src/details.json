@@ -1,0 +1,268 @@
+{
+    "personalDetails": {
+        "name": "Suraj Chaudhari",
+        "designation": "Software Developer",
+        "description": "I'm a passionate web developer with expertise in HTML, CSS, JavaScript, and React. I create dynamic, responsive websites and applications focused on delivering seamless user experiences. Committed to problem-solving, continuous learning, and developing clean, efficient code that meets modern web standards.",
+        "email": "chaudharisuraj2001@gnail.com",
+        "address": "Pune, Maharashtra, India",
+        "phone": "7263973272",
+        "website": ""
+    },
+    "navMenu": [
+        {
+            "id": 1,
+            "to": "/",
+            "icon": "fas fa-project-diagram",
+            "label": "About",
+            "class":"fa-solid fa-house"
+        },
+        {
+            "id": 2,
+            "to": "projects",
+            "icon": "fas fa-project-diagram",
+            "label": "Projects",
+            "class":"fa-solid fa-diagram-project"
+        },
+        {
+            "id": 3,
+            "to": "skills",
+            "icon": "fas fa-cogs",
+            "label": "Skills",
+            "class":"fa-solid fa-cogs"
+        },
+        {
+            "id": 4,
+            "to": "education",
+            "icon": "fas fa-graduation-cap",
+            "label": "Education",
+            "class":"fa-solid fa-graduation-cap"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "logo": "https://insighsthub.netlify.app/static/media/blog-logo.f46be6b5a9766a635c83.png",
+            "title": "Blog Application",
+            "githubUrl": "https://github.com/surajchaudhari03/Blog-Application",
+            "description": "Developed InsightsHub, a user-focused blog platform featuring advanced blog filtering, keyword search, and dynamic content handling in React, alongside a secure admin dashboard for efficient management of blogs, categories, and user queries.",
+            "tags": [
+                "React.js",
+                "Appwrite"
+            ]
+        },
+        {
+            "id": 2,
+            "logo": "https://media.istockphoto.com/id/483424683/photo/euro-and-dollar-symbol-eur-usd-pair.jpg?s=612x612&w=0&k=20&c=sxpJ59whk1IQbv2O22UE0zYEmZ9zZA76-iJBsrsAa_I=",
+            "title": "Currency Converter",
+            "githubUrl": "https://github.com/surajchaudhari03/Travel-Web-Application",
+            "description": "Developed a React-based currency converter allowing users to convert amounts between different currencies, using state management and APIs to provide real-time exchange rates for accurate conversions.",
+            "status": "now",
+            "tags": [
+                "React.js"
+            ]
+        },
+        {
+            "id": 3,
+            "logo": "https://w7.pngwing.com/pngs/413/968/png-transparent-icon-calendar-symbol-day-business-appointment-schedule.png",
+            "title": "Appointment Planner",
+            "githubUrl": "https://github.com/surajchaudhari03/Travel-Web-Application",
+            "description": "I developed an Appointment Planner and Contact Management app using React, featuring a user-friendly interface, seamless data management, and form validation with JavaScript, HTML, and CSS.",
+            "tags": [
+                "React.js"
+            ]
+        },
+        {
+            "id": 4,
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj6Ks_I9sAgGZ4XNwmBNNHw9RXpOpdMKKTwQ&s",
+            "title": "Rock Paper Scissor",
+            "githubUrl": "https://github.com/surajchaudhari03/Travel-Web-Application",
+            "description": "Developed a classic game with React.js, featuring a dynamic, intuitive interface and responsive design for seamless user interaction and an engaging gameplay experience.",
+            "tags": [
+                "React.js"
+            ]
+        },
+        {
+            "id": 5,
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtozKt-KI-IsR-dqP-xgg02bEy4oFSsVgsBw&s",
+            "title": "Weather Forcasting",
+            "githubUrl": "https://github.com/surajchaudhari03/Travel-Web-Application",
+            "description": "Built a dynamic weather app with real-time data integration using APIs, providing a seamless user experience with a responsive design for any device.",
+            "tags": [
+                "HTML",
+                "CSS",
+                "JS"
+            ]
+        }
+    ],
+    "skills": {
+        "Programming Languages": [
+            {
+                "name": "Javascript",
+                "image": "https://wallpapers.com/images/hd/java-script-logoon-dark-wood-background-7yyxqxekizvuj4vg.jpg"
+            },
+            {
+                "name": "Java",
+                "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-DujFw32Sf-Wb7JXba4C7UqWLSqTH3JOmu8zI8akYznG0OhFgWlkxvUDJytka6OUbcW77iElusjcSbUvmR-SBmWEgGQkCYo0ChVhkCaRWlzAxy68v9rNlc6LLulVYm0O7-q4sHbwqXRcq4x4Ma8AeqmV1cVjVcdrojLeONsDWCUHQxsEy7uOOF-Ln/s728-rw-e30/java.jpg"
+            }
+        ],
+        "Markup & Style": [
+            {
+                "name": "HTML",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyxijvgFfNz2gdhTbTNHfqcMuU7joRMM_Frg&s"
+            },
+            {
+                "name": "CSS",
+                "image": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/07/Black-Blue-background-with-CSS-logos.jpg"
+            },
+            {
+                "name": "Tailwind CSS",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-dbCeFK35gKsYwPyY5ETl6YkvakRLF38Qnw&s"
+            }
+        ],
+        "Library & Framework": [
+            {
+                "name": "React Js",
+                "image": "https://webartdevelopers.com/blog/wp-content/uploads/2020/10/react-logo-pure-css.png"
+            },
+            {
+                "name": "Spring Boot",
+                "image": "https://prominentpixel.com/blog/wp-content/uploads/2023/01/Does-Spring-Boot-Provides-Equalizer.png"
+            }
+        ],
+        "Version Control": [
+            {
+                "name": "Git",
+                "image": "https://images8.alphacoders.com/430/430944.jpg"
+            },
+            {
+                "name": "GitBash",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6SXnwDalVU3L7_taG4FF0c8eWI7Z8HOaCIEAU4gwpGUgbsCnANpm5L9OZ1fx7giw0rgY&usqp=CAU"
+            },
+            {
+                "name": "GitHub",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOVOH4NHf85lJfAD7WCeOrqx3gvTLWl5eVQ&s"
+            }
+        ],
+        "DBMS": [
+            {
+                "name": "SQL",
+                "image": "https://img.freepik.com/premium-vector/database-minimal-vector-line-icon-3d-button-isolated-black-background-premium-vectorxa_570929-1234.jpg?w=360"
+            },
+            {
+                "name": "Appwrite",
+                "image": "https://marketplace-assets.digitalocean.com/logos/appwrite-20-04.svg"
+            }
+        ]
+    },
+    "certificates": [
+        {
+            "id": 1,
+            "name": "HTML",
+            "icon": "devicon:html5"
+        },
+        {
+            "id": 2,
+            "name": "CSS",
+            "icon": "devicon:css3"
+        },
+        {
+            "id": 3,
+            "name": "JavaScript",
+            "icon": "devicon:javascript"
+        },
+        {
+            "id": 4,
+            "name": "React.Js",
+            "icon": "devicon:react"
+        },
+        {
+            "id": 5,
+            "name": "Tailwind CSS",
+            "icon": "devicon:tailwindcss"
+        },
+        {
+            "id": 6,
+            "name": "Java",
+            "icon": "devicon:java"
+        },
+        {
+            "id": 7,
+            "name": "SQL",
+            "icon": "devicon:sqldeveloper"
+        }
+    ],
+    "educationDetails": [
+        {
+            "id": 1,
+            "title": "Junior Software Developer",
+            "university": "NASSCOM",
+            "logo": "https://www.skilldevelopment.gov.in/themes/custom/msde/images/ncvet-logo-2.jpg",
+            "location": "Online",
+            "duration": "November 2023 - April 2024",
+            "skills": [
+                {
+                    "id": 1,
+                    "name": "HTML/CSS"
+                },
+                {
+                    "id": 2,
+                    "name": "JavaScript"
+                },
+                {
+                    "id": 3,
+                    "name": "React.js"
+                },
+                {
+                    "id": 4,
+                    "name": "Java"
+                },
+                {
+                    "id": 5,
+                    "name": "Spring Boot"
+                },
+                {
+                    "id": 6,
+                    "name": "SQL"
+                },
+                {
+                    "id": 7,
+                    "name": "Git"
+                },
+                {
+                    "id": 8,
+                    "name": "Agile/Scrum"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "B.E in Computer Engineering",
+            "university": "SGBAU, Maharashtra",
+            "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Sant_Gadge_Baba_Amravati_University_logo.png/220px-Sant_Gadge_Baba_Amravati_University_logo.png",
+            "location": "Yavatmal",
+            "duration": "August 2019 - June 2023",
+            "skills": [
+                {
+                    "id": 4,
+                    "name": "SDLC"
+                },
+                {
+                    "id": 5,
+                    "name": "OS"
+                },
+                {
+                    "id": 3,
+                    "name": "DBMS"
+                },
+                {
+                    "id": 1,
+                    "name": "Core Java"
+                },
+                {
+                    "id": 2,
+                    "name": "Linux"
+                }
+            ]
+        }
+    ]
+}
