@@ -12,30 +12,32 @@
         {
             "id": 1,
             "to": "/",
-            "icon": "fas fa-project-diagram",
             "label": "About",
-            "class":"fa-solid fa-house"
+            "icon":"fa-solid fa-house"
         },
         {
             "id": 2,
             "to": "projects",
-            "icon": "fas fa-project-diagram",
             "label": "Projects",
-            "class":"fa-solid fa-diagram-project"
+            "icon":"fa-solid fa-diagram-project"
         },
         {
             "id": 3,
             "to": "skills",
-            "icon": "fas fa-cogs",
             "label": "Skills",
-            "class":"fa-solid fa-cogs"
+            "icon":"fa-solid fa-cogs"
         },
         {
             "id": 4,
-            "to": "education",
-            "icon": "fas fa-graduation-cap",
+            "to": "experience",
             "label": "Education",
-            "class":"fa-solid fa-graduation-cap"
+            "icon":"fa-solid fa-briefcase"
+        },
+        {
+            "id": 5,
+            "to": "education",
+            "label": "Education",
+            "icon":"fa-solid fa-graduation-cap"
         }
     ],
     "projects": [
@@ -121,7 +123,7 @@
         ],
         "Library & Framework": [
             {
-                "name": "React Js",
+                "name": "React.js",
                 "image": "https://webartdevelopers.com/blog/wp-content/uploads/2020/10/react-logo-pure-css.png"
             },
             {
@@ -150,7 +152,7 @@
             },
             {
                 "name": "Appwrite",
-                "image": "https://marketplace-assets.digitalocean.com/logos/appwrite-20-04.svg"
+                "image": "https://images.opencollective.com/appwrite_io/1e2be19/logo/256.png"
             }
         ]
     },
@@ -158,37 +160,51 @@
         {
             "id": 1,
             "name": "HTML",
-            "icon": "devicon:html5"
+            "image": "devicon:html5",
+            "url": "",
+            "platform": ""
         },
         {
             "id": 2,
             "name": "CSS",
-            "icon": "devicon:css3"
+            "image": "devicon:css3",
+            "url": "",
+            "platform": ""
         },
         {
             "id": 3,
             "name": "JavaScript",
-            "icon": "devicon:javascript"
+            "image": "devicon:javascript",
+            "url": "",
+            "platform": ""
         },
         {
             "id": 4,
             "name": "React.Js",
-            "icon": "devicon:react"
+            "image": "devicon:react",
+            "url": "",
+            "platform": ""
         },
         {
             "id": 5,
             "name": "Tailwind CSS",
-            "icon": "devicon:tailwindcss"
+            "image": "devicon:tailwindcss",
+            "url": "",
+            "platform": ""
         },
         {
             "id": 6,
             "name": "Java",
-            "icon": "devicon:java"
+            "image": "devicon:java",
+            "url": "",
+            "platform": ""
         },
         {
             "id": 7,
             "name": "SQL",
-            "icon": "devicon:sqldeveloper"
+            "image": "devicon:sqldeveloper",
+            "url": "",
+            "platform": ""
         }
     ],
     "educationDetails": [

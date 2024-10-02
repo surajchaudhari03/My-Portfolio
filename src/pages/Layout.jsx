@@ -5,14 +5,14 @@ import Header from '../components/Header'
 
 const Layout = () => {
   return (
-    <div className="w-full bg-white dark:bg-gray-800 dark:text-white">
+    <div className="w-full bg-slate-100 dark:bg-gradient-to-b from-slate-900 to-slate-800 dark:text-white">
       <Header />
       <Navbar />
-      <main className='min-h-screen p-12'>
+      <main className='min-h-screen p-12 py-16 md:py-12'>
         <Outlet />
       </main>
     </div>
   )
 }
 
-export default Layout
+export default Layout;
