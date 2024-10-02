@@ -6,25 +6,20 @@ import { client } from '../sanity'
 function Navbar() {
     const [navigationData, setNavigationData] = useState([])
 
-    const navigationQuery = `*[_type == "navigation"] | order(_createdAt asc) {
-        name,
-        to,
-        icon
-    }`
-
+    const getNavigationData = async () => {
+        return await client.fetch(`*[_type == "navigation"] | order(_createdAt asc) {
+            name,
+            to,
+            icon
+        }`)
+    }
+    
     useEffect(() => {
-        const fetchCertificateData = async () => {
-            try {
-                await client.fetch(navigationQuery)
-                    .then((data) => {
-                        setNavigationData(data);
-                    })
-            } catch (error) {
-                console.log("error fetching navigation: ", error)
-            }
-        }
-
-        fetchCertificateData();
+        getNavigationData().then((data) => {
+            setNavigationData(data)
+        }).catch((error) => {
+            console.log('error fetching navigation: ', error)
+        })
     }, [])
 
     return (
@@ -37,8 +32,8 @@ function Navbar() {
                                 `${isActive ? "bg-slate-600 dark:bg-slate-400 rounded-full flex justify-center w-10" : ""}`
                             }
                         >
-                            <button class="menuBtn dark:text-slate-600 dark:border-slate-600 dark:before:bg-[#475569]">
-                                <i class={menu.icon}></i>
+                            <button className="menuBtn dark:text-slate-600 dark:border-slate-600 dark:before:bg-[#475569]">
+                                <i className={menu.icon}></i>
                             </button>
                         </NavLink>
                     ))}

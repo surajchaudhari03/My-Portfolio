@@ -6,26 +6,21 @@ import { Fade } from 'react-awesome-reveal'
 const Certificates = () => {
     const [certificateData, setCertificateData] = useState([])
 
-    const certificateQuery = `*[_type == "certificate"] | order(_createdAt asc) {
-        title,
-        platform,
-        url,
-        image
-    }`
+    const getCertificateData = async() => {
+        return await client.fetch(`*[_type == "certificate"] | order(_createdAt asc) {
+            title,
+            platform,
+            url,
+            image
+        }`)
+    }
 
     useEffect(() => {
-        const fetchCertificateData = async () => {
-            try {
-                await client.fetch(certificateQuery)
-                    .then((data) => {
-                        setCertificateData(data);
-                    })
-            } catch (error) {
-                console.log("error fetching certificates: ", error)
-            }
-        }
-
-        fetchCertificateData();
+        getCertificateData().then((data) => {
+            setCertificateData(data)
+        }).catch((error) => {
+            console.log('error fetching certificates: ', error)
+        })
     }, [])
 
     return (

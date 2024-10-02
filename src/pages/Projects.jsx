@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 const Projects = () => {
   const [projectsData, setProjectsData] = useState([]);
 
-  const getExperienceData = async () => {
+  const getProjectsData = async () => {
     return await client.fetch(`*[_type == "projects"] | order(title asc) {
       title,
       image,
@@ -17,7 +17,7 @@ const Projects = () => {
   }
 
   useEffect(() => {
-    getExperienceData().then((data) => {
+    getProjectsData().then((data) => {
       setProjectsData(data)
     }).catch((error) => {
       console.log("error fetching projects: ", error)
@@ -36,9 +36,14 @@ const Projects = () => {
           <ProjectCard projectsData={projectsData} />
         )}
       </div>
-      <div className="flex justify-center mt-8">
-        <button className="px-6 py-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-[#cbd5e1] bg-slate-700 hover:bg-slate-600 dark:hover:bg-slate-600 duration-500">More Projects</button>
-      </div>
+      <Fade direction="up" triggerOnce>
+        <a
+          href="https://github.com/surajchaudhari03?tab=repositories" target="_blank" rel="noreferrer"
+          className="flex justify-center mt-12"
+        >
+          <button className="px-6 py-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-[#cbd5e1] bg-slate-700 hover:bg-slate-600 dark:hover:bg-slate-600 duration-500">More Projects</button>
+        </a>
+      </Fade>
     </section>
   )
 };

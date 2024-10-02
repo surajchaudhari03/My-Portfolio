@@ -96,7 +96,7 @@ const ContactForm = () => {
                         type='submit'
                         disabled={isSubmitting}
                         value={isSubmitting ? 'Sending' : 'Send Message'}
-                        className="w-full p-3 font-bold bg-black dark:bg-slate-300 text-white dark:text-black rounded cursor-pointer"
+                        className="w-full p-3 font-bold bg-slate-900 dark:bg-slate-300 text-white dark:text-black rounded cursor-pointer"
                     />
                 </div>
             </Fade>

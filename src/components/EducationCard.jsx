@@ -7,14 +7,14 @@ const EducationCard = ({ educationData }) => {
         <>
             <Fade direction="up" triggerOnce>
                 {educationData.map((education, index) => (
-                    <div className="flex mb-4 gap-4 h-full">
+                    <div key={index} className="flex mb-4 gap-4 h-full">
                         
                         <div className="hidden md:flex flex-col items-center gap-2">
                             <i className='fa-solid fa-graduation-cap text-2xl text-slate-300 dark:text-slate-500'></i>
                             <div className="w-1 h-full bg-slate-200 dark:bg-slate-400"></div>
                         </div>
 
-                        <div key={index} className="w-full mx-auto p-6 rounded-lg borde border-gray-300 bg-slate-300 shadow-md dark:bg-slate-700 dark:border-gray-600">
+                        <div className="w-full mx-auto p-6 rounded-lg borde border-gray-300 bg-slate-300 shadow-md dark:bg-slate-700 dark:border-gray-600">
                             <div className="flex items-center pb-2 border-b border-gray-300 dark:border-gray-700 transition-all duration-300">
                                 <img
                                     alt="University logo"

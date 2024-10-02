@@ -25,8 +25,6 @@ const Education = () => {
     })
   }, [])
 
-  console.log(educationData);
-
   return (
     <section className='max-w-5xl mx-auto'>
       <Fade direction="down" triggerOnce>

@@ -26,8 +26,8 @@ const Skills = () => {
             </Fade>
 
             {skillsData.length > 0 && (
-                skillsData.map((category) => (
-                    <div key={category} className="mb-4">
+                skillsData.map((category, index) => (
+                    <div key={index} className="mb-4">
                         <Fade direction="up" triggerOnce>
                             <div className="flex items-center content-start mb-2">
                                 <span className="mx-2 text-gray-400">{category.categoryName}</span>
