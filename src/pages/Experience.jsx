@@ -3,17 +3,16 @@ import { client } from '../sanity'
 import ExperienceCard from '../components/ExperienceCard';
 import { Fade } from "react-awesome-reveal";
 
-async function getExperienceData() {
-    return await client.fetch(`*[_type == "experience"]`)
-}
-
 const Experience = () => {
     const [experienceData, setExperienceData] = useState([]);
+
+    async function getExperienceData() {
+        return await client.fetch(`*[_type == "experience"]`)
+    }
 
     useEffect(() => {
         getExperienceData().then((data) => {
             setExperienceData(data)
-            console.log(data)
         }).catch((error) => {
             console.log("error fetching experience: ", error)
         })

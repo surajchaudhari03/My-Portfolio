@@ -4,12 +4,12 @@ import { Fade } from 'react-awesome-reveal'
 import { client } from '../sanity'
 import DownloadCV from '../components/DownloadCV'
 
-async function getDetailsData() {
-    return await client.fetch(`*[_type == "contact"]`)
-}
-
 const Contact = () => {
-    const [detailsData, setDetailsData] = useState([])
+    const [detailsData, setDetailsData] = useState([]);
+
+    async function getDetailsData() {
+        return await client.fetch(`*[_type == "contact"]`)
+    }
 
     useEffect(() => {
         getDetailsData().then((data) => {
@@ -28,7 +28,7 @@ const Contact = () => {
                 </h3>
             </Fade>
 
-            <div class="flex flex-col md:flex-row justify-between text-center gap-10">
+            <div class="flex flex-col md:flex-row justify-between text-center gap-16">
                 <Fade direction='down' triggerOnce>
                     {detailsData.length > 0 && (
                         detailsData.map((data) => (

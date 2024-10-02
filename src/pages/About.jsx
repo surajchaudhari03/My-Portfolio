@@ -7,26 +7,23 @@ import DownloadCV from '../components/DownloadCV';
 export default function About() {
     const [aboutData, setAboutData] = useState([]);
 
-    const aboutQuery = `*[_type == "about"] {
-        greeting,
-        name,
-        image,
-        roles,
-        social,
-        summary
-    }`
+    const getAboutData = async () => {
+        return await client.fetch(`*[_type == "about"] {
+            greeting,
+            name,
+            image,
+            roles,
+            social,
+            summary
+        }`)
+    }
 
     useEffect(() => {
-        const fetchAboutData = async () => {
-            try {
-                const response = await client.fetch(aboutQuery)
-                setAboutData(response)
-            } catch (error) {
-                console.log('error fetching about details: ', error)
-            }
-        }
-
-        fetchAboutData();
+        getAboutData().then((data) => {
+            setAboutData(data)
+        }).catch((error) => {
+            console.log('error fetching about details: ', error)
+        })
     }, [])
 
     return (

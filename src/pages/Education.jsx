@@ -7,25 +7,22 @@ import { Fade } from "react-awesome-reveal";
 const Education = () => {
   const [educationData, setEducationData] = useState([]);
 
-  const educationQuery = `*[_type == "education"] | order(_createdAt desc) {
-    title,
-    institution,
-    duration,
-    type,
-    logo
-  }`
+  const getDetailsData = async () => {
+    return await client.fetch(`*[_type == "education"] | order(_createdAt desc) {
+      title,
+      institution,
+      duration,
+      type,
+      logo
+    }`)
+  }
 
   useEffect(() => {
-    const fetchEducationData = async () => {
-      try {
-        const response = await client.fetch(educationQuery);
-        setEducationData(response)
-      } catch (error) {
-        console.log("error fetching education: ", error)
-      }
-    }
-
-    fetchEducationData();
+    getDetailsData().then((data) => {
+      setEducationData(data)
+    }).catch((error) => {
+      console.log("error fetching education: ", error);
+    })
   }, [])
 
   console.log(educationData);

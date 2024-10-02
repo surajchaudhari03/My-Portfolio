@@ -6,29 +6,23 @@ import { Fade } from "react-awesome-reveal";
 const Projects = () => {
   const [projectsData, setProjectsData] = useState([]);
 
-  const projectQuery = `*[_type == "projects"] | order(title asc) {
-    title,
-    image,
-    githubUrl,
-    projectUrl,
-    technologies
-  }`;
+  const getExperienceData = async () => {
+    return await client.fetch(`*[_type == "projects"] | order(title asc) {
+      title,
+      image,
+      githubUrl,
+      projectUrl,
+      technologies
+    }`)
+  }
 
   useEffect(() => {
-    const fetchProjectsData = async () => {
-      try {
-        const response = await client.fetch(projectQuery)
-        setProjectsData(response);
-      } catch (error) {
-        console.log("Error fetching projects: ", error);
-      }
-    };
-
-    fetchProjectsData();
-  }, []);
-
-  console.log(projectsData);
-
+    getExperienceData().then((data) => {
+      setProjectsData(data)
+    }).catch((error) => {
+      console.log("error fetching projects: ", error)
+    })
+  }, [])
 
   return (
     <section className='max-w-5xl mx-auto'>

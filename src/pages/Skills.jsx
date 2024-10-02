@@ -5,20 +5,17 @@ import { Fade } from "react-awesome-reveal";
 const Skills = () => {
     const [skillsData, setSkillsData] = useState([]);
 
-    const skillQuery = `*[_type == "skills"] | order(_createdAt asc)`
+    const getSkillsData = async () => {
+        return await client.fetch(`*[_type == "skills"] | order(_createdAt asc)`)
+    }
 
     useEffect(() => {
-        const fetchSkillsData = async () => {
-            try {
-                const response = await client.fetch(skillQuery)
-                setSkillsData(response);
-            } catch (error) {
-                console.log("Error fetching skills: ", error);
-            }
-        };
-
-        fetchSkillsData();
-    }, []);
+        getSkillsData().then((data) => {
+            setSkillsData(data)
+        }).catch((error) => {
+            console.log("error fetching skills: ", error)
+        })
+    }, [])
 
     return (
         <section className='max-w-5xl mx-auto'>
